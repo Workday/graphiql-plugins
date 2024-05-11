@@ -1,0 +1,88 @@
+.attachments-container {
+    display: contents;
+}
+
+.attachments-container h2 {
+    font-size: var(--font-size-h2);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-medium);
+}
+
+.attachments-container button {
+    all: unset;
+    border-radius: var(--border-radius-4);
+    color: hsla(var(--color-neutral), var(--alpha-secondary));
+    padding: var(--px-8) var(--px-12);
+    cursor: pointer;
+}
+
+.attachments-container button:hover {
+    background-color: hsla(var(--color-neutral), var(--alpha-background-light));
+}
+
+.attachments-container input[type="text"] {
+    color: hsla(var(--color-neutral));
+    background-color: hsla(var(--color-neutral), var(--alpha-background-light));
+    border-radius: var(--border-radius-4);
+    font-family: var(--font-family-mono);
+}
+
+.attachments-container svg {
+    height: var(--px-20);
+    width: var(--px-20);
+}
+
+.attachment-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-size-h3);
+    font-family: var(--font-family-mono);
+}
+
+.attachment-title > :first-child {
+    flex: 1 1 auto
+}
+
+.attachment-title > :last-child {
+    flex: 0 1 auto;
+}
+
+button.attachment-delete {
+    width: 2em;
+    font-size: 0.8em;
+    text-align: center;
+    padding: 0;
+}
+
+.attachment-delete:hover {
+    color: hsl(var(--color-error));
+}
+
+.attachment-header {
+    justify-content: start;
+    font-size: 1em;
+    font-family: var(--font-family-mono);
+}
+
+.attachments-icon {
+    display: inline-block;
+    position: relative;
+}
+
+.attachments-icon svg {
+    height: var(--px-20);
+    width: var(--px-20);
+}
+
+.attachments-icon-badge {
+    background-color: #fa3e3e;
+    border-radius: 2px;
+    color: white;
+
+    padding: 1px 3px;
+    font-size: 10px;
+
+    position: absolute; /* Position the badge within the relatively positioned button */
+    right: 80%;
+    bottom: 80%;
+}

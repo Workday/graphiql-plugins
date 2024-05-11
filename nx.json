@@ -1,0 +1,16 @@
+{
+  "targetDefaults": {
+    "dev": {
+      "dependsOn": ["build"]
+    },
+    "build": {
+      "dependsOn": ["^build"]
+    },
+    "test": {
+      "dependsOn": ["^build"]
+    },
+    "release": {
+      "dependsOn": ["^release"]
+    }
+  }
+}

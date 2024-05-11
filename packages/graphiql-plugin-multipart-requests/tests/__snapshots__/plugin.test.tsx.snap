@@ -1,0 +1,198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AttachmentContent renders a valid attachment 1`] = `
+<div>
+  <div
+    class="attachment-content"
+  >
+    <div
+      class="attachment-title"
+    >
+      <span
+        style="cursor: pointer;"
+      >
+        a
+         
+        <div>
+          PenIcon
+        </div>
+      </span>
+      <button
+        class="attachment-delete"
+      >
+        <div>
+          PenIcon
+        </div>
+      </button>
+    </div>
+    <div
+      class="attachment-header"
+    >
+      <div>
+        <span>
+          Content-Disposition
+          : 
+        </span>
+        <span>
+          form-data; name="a"; filename="A"
+        </span>
+      </div>
+      <div>
+        <span>
+          Content-Type
+          : 
+        </span>
+        <span>
+          application/octet-stream
+        </span>
+      </div>
+    </div>
+    <div>
+      <button
+        style="margin-top: 0.5em;"
+      >
+        Attach File
+      </button>
+      <input
+        style="display: none;"
+        type="file"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AttachmentContent renders an invalid attachment 1`] = `
+<div>
+  <div
+    class="attachment-content"
+  >
+    <div
+      class="attachment-title"
+    >
+      <span
+        style="cursor: pointer;"
+      >
+        a
+         
+        <div>
+          PenIcon
+        </div>
+      </span>
+      <button
+        class="attachment-delete"
+      >
+        <div>
+          PenIcon
+        </div>
+      </button>
+    </div>
+    <div
+      class="graphiql-doc-explorer-error"
+    >
+      File Error!
+    </div>
+    <div
+      class="attachment-header"
+    >
+      <div>
+        <span>
+          Content-Disposition
+          : 
+        </span>
+        <span>
+          form-data; name="a"; filename="A"
+        </span>
+      </div>
+      <div>
+        <span>
+          Content-Type
+          : 
+        </span>
+        <span>
+          application/octet-stream
+        </span>
+      </div>
+    </div>
+    <div>
+      <button
+        style="margin-top: 0.5em;"
+      >
+        Attach File
+      </button>
+      <input
+        style="display: none;"
+        type="file"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PartHeadersComponent defaults to octet-stream 1`] = `
+<div>
+  <div
+    class="attachment-header"
+  >
+    <div>
+      <span>
+        Content-Disposition
+        : 
+      </span>
+      <span>
+        form-data; name="a"; filename="A"
+      </span>
+    </div>
+    <div>
+      <span>
+        Content-Type
+        : 
+      </span>
+      <span>
+        application/octet-stream
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PartHeadersComponent renders a file 1`] = `
+<div>
+  <div
+    class="attachment-header"
+  >
+    <div>
+      <span>
+        Content-Disposition
+        : 
+      </span>
+      <span>
+        form-data; name="a"; filename="A"
+      </span>
+    </div>
+    <div>
+      <span>
+        Content-Type
+        : 
+      </span>
+      <span>
+        text/plain
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PartNameComponent renders a part 1`] = `
+<div>
+  <span
+    style="cursor: pointer;"
+  >
+    a
+     
+    <div>
+      PenIcon
+    </div>
+  </span>
+</div>
+`;

@@ -1,0 +1,28 @@
+# Personal Configs
+.DS_Store
+
+# node directories
+node_modules
+*.tsbuildinfo
+
+# lerna
+lerna-debug.log
+/.nx
+/.nx-cache
+
+# tshy
+.tshy
+
+# build folders
+dist
+
+# Playwright
+/test-results/
+/playwright-report/
+/playwright/
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea

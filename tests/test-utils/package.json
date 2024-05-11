@@ -1,0 +1,37 @@
+{
+  "name": "test-utils",
+  "private": true,
+  "collaborators": [
+    "Dylan Owen <dylan.owen@workday.com>"
+  ],
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "tsc --project ./tsconfig.json --watch --pretty --incremental --preserveWatchOutput",
+    "build": "tsc --project ./tsconfig.json",
+    "release": "npm run build",
+    "clean": "rimraf dist/"
+  },
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      }
+    }
+  },
+  "types": "./dist/esm/index.d.ts",
+  "files": [
+    "dist/**/*.*(d.ts|js|graphql)"
+  ],
+  "directories": {
+    "src": "src"
+  },
+  "dependencies": {
+    "@graphql-tools/mock": "^9.0.2",
+    "@graphql-tools/schema": "^10.0.3",
+    "graphql": "^16.8.1",
+    "graphql-tag": "^2.12.6"
+  }
+}

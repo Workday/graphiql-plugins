@@ -1,0 +1,50 @@
+{
+  "name": "@workday/graphiql-plugin-multipart-requests",
+  "collaborators": [
+    "Dylan Owen <dylan.owen@workday.com>"
+  ],
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "tsc --project ./tsconfig.dev.json --watch --pretty --incremental --preserveWatchOutput",
+    "test:unit": "jest",
+    "build": "tsc --project ./tsconfig.json",
+    "release": "tshy",
+    "clean": "rimraf dist/"
+  },
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/commonjs/index.d.ts",
+        "default": "./dist/commonjs/index.js"
+      }
+    }
+  },
+  "types": "./dist/commonjs/index.d.ts",
+  "main": "./dist/commonjs/index.js",
+  "files": [
+    "dist/**/*.@(js|d.ts|js.map|json)",
+    "style.css"
+  ],
+  "directories": {
+    "src": "src",
+    "test": "tests"
+  },
+  "peerDependencies": {
+    "@graphiql/react": "^0.20.4",
+    "graphql": "^16.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "tshy": {
+    "exports": {
+      "./package.json": "./package.json",
+      ".": "./src/index.ts"
+    }
+  }
+}
