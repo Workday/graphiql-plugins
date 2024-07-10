@@ -11,6 +11,10 @@
     "release": "tshy",
     "clean": "rimraf dist/"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "type": "module",
   "exports": {
     "./package.json": "./package.json",
