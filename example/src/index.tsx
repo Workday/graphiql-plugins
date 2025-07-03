@@ -12,6 +12,7 @@ import {
   MultipartAttachmentsContext,
   MultipartAttachmentsProvider,
 } from '@workday/graphiql-plugin-multipart-requests';
+import 'graphiql/setup-workers/webpack';
 
 require('graphiql/graphiql.css');
 
