@@ -4,7 +4,7 @@
   "collaborators": [
     "Dylan Owen <dylan.owen@workday.com>"
   ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "webpack serve --mode=development",
     "build": "webpack --mode=development",
@@ -13,9 +13,11 @@
   },
   "type": "module",
   "dependencies": {
-    "@graphiql/toolkit": "^0.9.1",
-    "@workday/graphiql-plugin-multipart-requests": "^0.0.1",
-    "graphiql": "^3.2.1",
+    "@graphiql/toolkit": "^0.11.3",
+    "@graphiql/plugin-doc-explorer": "0.3.0",
+    "@graphiql/react": "^0.35.4",
+    "@workday/graphiql-plugin-multipart-requests": "^0.1.0",
+    "graphiql": "^5.0.3",
     "graphql": "^16.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

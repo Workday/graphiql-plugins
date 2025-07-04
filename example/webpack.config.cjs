@@ -38,13 +38,6 @@ module.exports = {
     ]
   },
   resolve: {
-    // make sure we get the same libraries even if we symlink in dependencies
-    alias: {
-      '@graphiql/react': path.resolve(__dirname, '../node_modules/@graphiql/react'),
-      graphql: path.resolve(__dirname, '../node_modules/graphql'),
-      react: path.resolve(__dirname, '../node_modules/react'),
-      'react-dom': path.resolve(__dirname, '../node_modules/react-dom')
-    },
     // graphql can accidentally be imported in 2 ways if we don't have this
     // https://stackoverflow.com/a/52635917/6079700
     extensions: ['.tsx', '.ts', '.mjs', '.js']
