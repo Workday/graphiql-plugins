@@ -1,5 +1,6 @@
 import { GraphiQLPlugin, PenIcon, TrashIcon, useGraphiQL } from '@graphiql/react';
-import React, { CSSProperties, useContext, useEffect, useRef, useState } from 'react';
+import * as React from 'react';
+import { CSSProperties, useContext, useEffect, useRef, useState } from 'react';
 import uploadClipSvg from './attachment-icon.svg.js';
 import { AttachmentDeleteAction, AttachmentUpdateAction, MultipartAttachmentsInternalContext } from './context.js';
 
