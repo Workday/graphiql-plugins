@@ -14,6 +14,7 @@
     "demo:record": "RECORD_DEMO=true npx playwright test --config ./tests --project=chromium ./integration/demo.spec.ts",
     "demo:convert": "find . -type f -name \"demo.webm\" -exec bash -c 'ffmpeg -y -i \"$0\" -ss 1 -vf \"scale=1000:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse=dither=bayer:bayer_scale=4\" -c:v gif \"${0%.webm}.gif\" && rm \"$0\"' {} \\;",
     "precommit": "npm run lint && npm run test && npm run release",
+    "publish:npm": "lerna publish from-package",
     "build": "lerna run build",
     "release": "lerna run release",
     "clean": "lerna run clean --stream"
