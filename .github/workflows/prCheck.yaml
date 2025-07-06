@@ -30,6 +30,8 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Release build 🏗️
         run: npm run setup && npm run release
+      - name: Install Browsers 🌐
+        run: npx playwright install --with-deps
       - name: Tests 🧪
         run: npm run test
 
