@@ -1,4 +1,5 @@
-import React, { createContext, Reducer, useReducer } from 'react';
+import * as React from 'react';
+import { createContext, Reducer, useReducer } from 'react';
 import { AttachmentEntry, MultipartAttachments } from './multipart-attachments.js';
 
 export type AttachmentAddAction = {

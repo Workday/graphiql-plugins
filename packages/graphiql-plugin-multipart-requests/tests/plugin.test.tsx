@@ -7,7 +7,6 @@ jest.mock('@graphiql/react', () => {
   return {
     PenIcon: () => <div>PenIcon</div>,
     TrashIcon: () => <div>PenIcon</div>,
-    usePluginContext: () => null,
   };
 });
 

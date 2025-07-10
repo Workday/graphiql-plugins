@@ -1,5 +1,6 @@
-import { GraphiQLPlugin, PenIcon, TrashIcon, usePluginContext } from '@graphiql/react';
-import React, { CSSProperties, useContext, useEffect, useRef, useState } from 'react';
+import { GraphiQLPlugin, PenIcon, TrashIcon, useGraphiQL } from '@graphiql/react';
+import * as React from 'react';
+import { CSSProperties, useContext, useEffect, useRef, useState } from 'react';
 import uploadClipSvg from './attachment-icon.svg.js';
 import { AttachmentDeleteAction, AttachmentUpdateAction, MultipartAttachmentsInternalContext } from './context.js';
 
@@ -16,7 +17,7 @@ const GRAPHIQL_PLUGIN: GraphiQLPlugin = {
   title: 'Multipart Attachments',
   icon: () => {
     const [attachments] = useContext(MultipartAttachmentsInternalContext);
-    const pluginContext = usePluginContext();
+    const visiblePlugin = useGraphiQL(state => state.visiblePlugin);
 
     const style: CSSProperties = {
       fontFamily: 'var(--font-family-mono)',
@@ -24,7 +25,7 @@ const GRAPHIQL_PLUGIN: GraphiQLPlugin = {
       textAlign: 'center',
       width: 'auto',
     };
-    if (pluginContext?.visiblePlugin === GRAPHIQL_PLUGIN) {
+    if (visiblePlugin === GRAPHIQL_PLUGIN) {
       style.fontWeight = 'bold';
     }
 
