@@ -49,6 +49,18 @@
     flex: 0 1 auto;
 }
 
+.attachment-part-name-edit-label,
+.attachment-part-name-view {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.attachment-part-name-edit-input {
+    width: 10em;
+    max-width: 100%;
+}
+
 button.attachment-delete {
     width: 2em;
     font-size: 0.8em;

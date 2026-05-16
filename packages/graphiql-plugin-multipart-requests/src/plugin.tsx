@@ -117,7 +117,10 @@ export function PartNameComponent({ name, setName }: { name: string; setName: (n
   
   if (isEditing) {
     return (
+      <label className='attachment-part-name-edit-label'>
+        Part name:
         <input
+          className='attachment-part-name-edit-input'
           ref={inputRef}
           type='text'
           aria-label='Part name'
@@ -127,13 +130,15 @@ export function PartNameComponent({ name, setName }: { name: string; setName: (n
             if (e.key === 'Escape' || e.key === 'Enter') {
               endEditing();
             }
-          }} />
+          }}
+        />
+      </label>
     );
   }
 
   return (
-    <>
-      <span>{name}</span>
+    <span className='attachment-part-name-view'>
+      <span>Part name: {name}</span>
       <button 
         onClick={() => setIsEditing(true)} 
         aria-label={`Edit part name: ${name}`}
@@ -141,7 +146,7 @@ export function PartNameComponent({ name, setName }: { name: string; setName: (n
       >
         <PenIcon />
       </button>
-    </>
+    </span>
   );
 }
 

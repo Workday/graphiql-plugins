@@ -8,17 +8,22 @@ exports[`AttachmentContent renders a valid attachment 1`] = `
     <div
       class="attachment-title"
     >
-      <span>
-        a
-      </span>
-      <button
-        aria-label="Edit part name: a"
-        title="Edit part name"
+      <span
+        class="attachment-part-name-view"
       >
-        <div>
-          PenIcon
-        </div>
-      </button>
+        <span>
+          Part name: 
+          a
+        </span>
+        <button
+          aria-label="Edit part name: a"
+          title="Edit part name"
+        >
+          <div>
+            PenIcon
+          </div>
+        </button>
+      </span>
       <button
         aria-label="Delete attachment a"
         class="attachment-delete"
@@ -73,17 +78,22 @@ exports[`AttachmentContent renders an invalid attachment 1`] = `
     <div
       class="attachment-title"
     >
-      <span>
-        a
-      </span>
-      <button
-        aria-label="Edit part name: a"
-        title="Edit part name"
+      <span
+        class="attachment-part-name-view"
       >
-        <div>
-          PenIcon
-        </div>
-      </button>
+        <span>
+          Part name: 
+          a
+        </span>
+        <button
+          aria-label="Edit part name: a"
+          title="Edit part name"
+        >
+          <div>
+            PenIcon
+          </div>
+        </button>
+      </span>
       <button
         aria-label="Delete attachment a"
         class="attachment-delete"
@@ -191,16 +201,21 @@ exports[`PartHeadersComponent renders a file 1`] = `
 
 exports[`PartNameComponent renders a part 1`] = `
 <div>
-  <span>
-    a
-  </span>
-  <button
-    aria-label="Edit part name: a"
-    title="Edit part name"
+  <span
+    class="attachment-part-name-view"
   >
-    <div>
-      PenIcon
-    </div>
-  </button>
+    <span>
+      Part name: 
+      a
+    </span>
+    <button
+      aria-label="Edit part name: a"
+      title="Edit part name"
+    >
+      <div>
+        PenIcon
+      </div>
+    </button>
+  </span>
 </div>
 `;
