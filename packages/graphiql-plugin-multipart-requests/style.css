@@ -59,6 +59,7 @@
 .attachment-part-name-edit-input {
     width: 10em;
     max-width: 100%;
+    margin-left: var(--px-10);
 }
 
 button.attachment-delete {
