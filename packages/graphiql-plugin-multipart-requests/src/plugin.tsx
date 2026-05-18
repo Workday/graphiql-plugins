@@ -72,7 +72,7 @@ export function AttachmentContent({ name, value, updateAttachment, error }: Atta
     <div className={'attachment-content'}>
       <div className={'attachment-title'}>
         <PartNameComponent name={name} setName={(name) => updateAttachment({ action: 'update', name })} />
-        <button onClick={() => updateAttachment({ action: 'delete' })} className={'attachment-delete'}>
+        <button aria-label={`Delete attachment ${name}`} onClick={() => updateAttachment({ action: 'delete' })} className={'attachment-delete'}>
           <TrashIcon />
         </button>
       </div>
@@ -114,39 +114,40 @@ export function PartNameComponent({ name, setName }: { name: string; setName: (n
       setName(inputRef.current.value);
     }
   }
-  function onSubmit(event: React.BaseSyntheticEvent) {
-    event.preventDefault();
-    event.stopPropagation();
-    endEditing();
-  }
-
+  
   if (isEditing) {
     return (
-      <form onSubmit={onSubmit}>
+      <label className='attachment-part-name-edit-label'>
+        Part name:
         <input
+          className='attachment-part-name-edit-input'
           ref={inputRef}
           type='text'
+          aria-label='Part name'
           defaultValue={name}
           onBlur={endEditing}
           onKeyDown={(e) => {
-            if (e.key === 'Escape') {
-              onSubmit(e);
+            if (e.key === 'Escape' || e.key === 'Enter') {
+              endEditing();
             }
           }}
         />
-      </form>
-    );
-  } else {
-    return (
-      <>
-        <span onClick={() => setIsEditing(true)} style={{ cursor: 'pointer' }}>
-          {name}
-          &nbsp;
-          <PenIcon />
-        </span>
-      </>
+      </label>
     );
   }
+
+  return (
+    <span className='attachment-part-name-view'>
+      <span>Part name: {name}</span>
+      <button 
+        onClick={() => setIsEditing(true)} 
+        aria-label={`Edit part name: ${name}`}
+        title="Edit part name"
+      >
+        <PenIcon />
+      </button>
+    </span>
+  );
 }
 
 export function PartHeadersComponent({ name, value }: { name: string; value: File }) {

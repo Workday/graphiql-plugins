@@ -24,6 +24,11 @@ describe('AttachmentContent', () => {
         .container
     ).toMatchSnapshot();
   });
+  test('delete button has an accessible name', () => {
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    const { getByRole } = render(<AttachmentContent name='a' value={new File([], 'A')} updateAttachment={() => {}} />);
+    expect(getByRole('button', { name: 'Delete attachment a' })).toBeTruthy();
+  });
 });
 
 describe('PartNameComponent', () => {
@@ -39,7 +44,7 @@ describe('PartNameComponent', () => {
       return render(<PartNameComponent name='a' setName={setName} />, { container });
     });
     act(() => {
-      container.querySelector('span')!.click();
+      container.querySelector('button')!.click();
     });
     act(() => {
       const input = container.querySelector('input')!;
@@ -47,6 +52,11 @@ describe('PartNameComponent', () => {
       input.blur();
     });
     expect(setName).toHaveBeenCalledWith('newName');
+  });
+  test('edit part name is a button with accessible name', () => {
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    const { getByRole } = render(<PartNameComponent name='a' setName={() => {}} />);
+    expect(getByRole('button', { name: 'Edit part name: a' })).toBeTruthy();
   });
 });
 describe('PartHeadersComponent', () => {

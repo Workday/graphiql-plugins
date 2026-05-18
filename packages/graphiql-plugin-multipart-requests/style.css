@@ -35,6 +35,8 @@
 .attachment-title {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    min-height: 2.2em;
     font-size: var(--font-size-h3);
     font-family: var(--font-family-mono);
 }
@@ -45,6 +47,19 @@
 
 .attachment-title > :last-child {
     flex: 0 1 auto;
+}
+
+.attachment-part-name-edit-label,
+.attachment-part-name-view {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.attachment-part-name-edit-input {
+    width: 10em;
+    max-width: 100%;
+    margin-left: var(--px-10);
 }
 
 button.attachment-delete {
