@@ -24,3 +24,8 @@ jobs:
         env:
           NPM_CONFIG_PROVENANCE: 'true'
           NPM_CONFIG_LOGLEVEL: 'verbose'
+      - name: Print npm debug logs if publish failed 🔍
+        if: failure()
+        run: |
+          echo "=== npm debug logs ==="
+          tail -n 200 ~/.npm/_logs/*.log 2>/dev/null || echo "No npm debug logs found"
