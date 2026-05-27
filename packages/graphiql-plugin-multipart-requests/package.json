@@ -3,7 +3,7 @@
   "collaborators": [
     "Dylan Owen <dylan.owen@workday.com>"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "dev": "tsc --project ./tsconfig.dev.json --watch --pretty --incremental --preserveWatchOutput",
     "test:unit": "jest",

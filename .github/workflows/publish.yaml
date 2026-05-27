@@ -5,6 +5,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - name: Checkout 🛒
         uses: actions/checkout@v4
@@ -18,4 +21,4 @@ jobs:
       - name: Publish package on NPM 📦
         run: npm run publish:npm
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.PUBLISH_TO_NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: 'true'
