@@ -29,6 +29,8 @@ module.exports = {
       },
       {
         test: /\.css$/i,
+        // graphiql marks its css as side-effect free, so webpack would otherwise drop it
+        sideEffects: true,
         use: ['style-loader', 'css-loader']
       },
       {

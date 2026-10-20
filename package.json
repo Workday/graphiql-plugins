@@ -2,6 +2,9 @@
   "name": "graphiql-plugins-monorepo",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.22.2"
+  },
   "scripts": {
     "setup": "npm install && npx playwright install",
     "dev": "lerna run dev --stream",
@@ -38,7 +41,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "jest-fetch-mock": "^3.0.3",
     "jsdom": "^23.2.0",
-    "lerna": "^8.2.3",
+    "lerna": "^10.1.1",
     "prettier": "3.2.5",
     "rimraf": "^5.0.5",
     "ts-jest": "^29.1.2",
