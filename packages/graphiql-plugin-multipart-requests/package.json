@@ -3,13 +3,18 @@
   "collaborators": [
     "Dylan Owen <dylan.owen@workday.com>"
   ],
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
     "dev": "tsc --project ./tsconfig.dev.json --watch --pretty --incremental --preserveWatchOutput",
     "test:unit": "jest",
     "build": "tsc --project ./tsconfig.json",
     "release": "tshy",
     "clean": "rimraf dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Workday/graphiql-plugins.git",
+    "directory": "packages/graphiql-plugin-multipart-requests"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
